@@ -18,7 +18,6 @@
  */
 
 /* BROKEN STUFF:
- * - passing two of the same arguments sets one radius to 0
  * - I will find more bugs, I am sure...
  */
 
@@ -107,8 +106,8 @@ int main(int argc, char	**argv)
 		}
 	}
 		// debug
-		std::cout << "R_major is: " << R_major << std::endl;
-		std::cout << "r_minor is: " << r_minor << std::endl;
+		//std::cout << "R_major is: " << R_major << std::endl;
+		//std::cout << "r_minor is: " << r_minor << std::endl;
 		// end debug
 
 		if (R_major > r_minor) // the major radius needs to be larger than the minor radius
