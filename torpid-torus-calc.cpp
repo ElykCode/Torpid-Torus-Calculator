@@ -18,7 +18,6 @@
  */
 
 /* BROKEN STUFF:
- * - not passing flags doesn't show the help
  * - passing two of the same arguments sets one radius to 0
  * - I will find more bugs, I am sure...
  */
