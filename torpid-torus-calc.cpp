@@ -37,6 +37,7 @@ float CalculateTorus(float r, float R)
 void PrintHelp()
 {
 	std::cout <<
+		"USAGE:\n"
 		"--minor-radius <minor radius> | -r <minor radius>\n"
 		"--major-radius <major radius> | -R <major radius>\n"
 		"--debug | -d\n";
@@ -56,6 +57,13 @@ int main(int argc, char	**argv)
 	
 	int c;
 	
+	// user needs to pass arguments, so verify this
+	if (argc == 1)
+	{
+		PrintHelp();
+		exit(1);
+	}
+
 	while (1)
 	{
 		// build longopts structure
@@ -102,6 +110,8 @@ int main(int argc, char	**argv)
 		// debug
 		std::cout << "R_major is: " << R_major << std::endl;
 		std::cout << "r_minor is: " << r_minor << std::endl;
+		// end debug
+
 		if (R_major > r_minor) // the major radius needs to be larger than the minor radius
 		{
 			std::cout << CalculateTorus(r_minor, R_major) << std::endl;
