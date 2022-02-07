@@ -117,7 +117,9 @@ int main(int argc, char	**argv)
 		}
 		else
 		{
-			std::cerr << "Major radius needs to be larger than the minor radius." << std::endl;
+			// it makes more sense to have this print the help, like every other incorrect usage,
+			// as opposed to making it print a new error message...
+			PrintHelp();
 			exit(1);
 		}
 	return 0;
